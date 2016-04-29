@@ -1,4 +1,3 @@
-var x;
 var loadWiki = function(value){
       // URL using Wikipedia's API. Value = user's search
       var url = "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&generator=search&exsentences=2&exlimit=10&exintro=1&explaintext=1&gsrsearch="+value+"&gsroffset=2&gsrinterwiki=1";
@@ -20,7 +19,7 @@ var loadWiki = function(value){
             console.log(response.query.pages);
             var obj = response.query.pages;
             for (var re in obj){
-               x = obj[re];
+               var x = obj[re];
                console.log(x);
                $("#results").append("<a href='https://en.wikipedia.org/?curid="+x.pageid+"' target='_blank'><li><h2>"+x.title+"<span id='wikilink'>Link to Wikipedia <span class='glyphicon glyphicon-globe'></span></span></h2><h3>"+x.extract+"</h3></li></a>");
             }
