@@ -34,6 +34,7 @@ var loadWiki = function(value){
             alert('Error: ' + errorType + ' with message: ' + errorMessage);
 
          },
+         // wait 3s before error
          timeout: 3000,
          // changes icon from search to refresh during the response of Wikipedia's API
          beforeSend: function() {
