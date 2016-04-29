@@ -10,19 +10,24 @@ var wikisearch = {
          data: null,
          dataType: 'jsonp',
          success: function(response) {
+            if(!response.query){
+               $("input").val("");
+               $('.input-group-btn button span').removeClass('glyphicon-refresh').addClass('glyphicon-search');
+            }
 
             console.log(response.query.pages);
          },
          error: function(request, errorType, errorMessage) {
             alert('Error: ' + errorType + ' with message: ' + errorMessage);
+
          },
          timeout: 3000,
          beforeSend: function() {
-            //$('.confirmation').addClass('is-loading');
+            $('.input-group-btn button span').removeClass('glyphicon-search').addClass('glyphicon-refresh');
             console.log("loading....");
          },
          complete: function() {
-            //$('.confirmation').removeClass('is-loading');
+            $('.input-group-btn button span').removeClass('glyphicon-refresh').addClass('glyphicon-search');
             console.log("Complete...");
          }
       });
