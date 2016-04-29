@@ -38,15 +38,17 @@
 }
 
 li {
+
    list-style: none;
-   background-color: lightskyblue;
+   background-color: #2B542C;
    margin-top: 20px;
    padding: 5px 10px;
    border-radius: 5px;
 }
 
 li:hover {
-   color: deepskyblue;
+   background-color: #1f3820;
+   cursor:pointer;
 }
 
 li h2 {
@@ -54,4 +56,20 @@ li h2 {
 }
 li h3 {
    color: gray;
+}
+
+a:link {
+   text-decoration: none;
+}
+
+.title {
+   color: chocolate;
+   font-size: 3em;
+}
+
+#wikilink {
+   font-size: 12px;
+   display: block;
+   float: right;
+   margin-right: 10px;
 }
