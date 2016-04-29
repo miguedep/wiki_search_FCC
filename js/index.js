@@ -4,7 +4,7 @@ var wikisearch = {
     $('.confirmation').on('click', 'button', this.loadWiki);
   },
    loadWiki: function(value){
-      var url = "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&generator=search&exsentences=1&exlimit=10&exintro=1&explaintext=1&gsrsearch="+value+"&gsroffset=2&gsrinterwiki=1";
+      var url = "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&generator=search&exsentences=2&exlimit=10&exintro=1&explaintext=1&gsrsearch="+value+"&gsroffset=2&gsrinterwiki=1";
       $.ajax({
          type: 'GET',
          url: url,

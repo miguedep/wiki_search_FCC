@@ -36,3 +36,22 @@
 .search-query:focus + button {
    z-index: 3;
 }
+
+li {
+   list-style: none;
+   background-color: lightskyblue;
+   margin-top: 20px;
+   padding: 5px 10px;
+   border-radius: 5px;
+}
+
+li:hover {
+   color: deepskyblue;
+}
+
+li h2 {
+   color: chocolate;
+}
+li h3 {
+   color: gray;
+}
